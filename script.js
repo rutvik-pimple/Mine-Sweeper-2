@@ -100,11 +100,8 @@ const gameOver = () => {
 };
 
 const startNewGame = () => {
-  board = null;
-  noOfBomb = 10;
-  dimension = 9;
   score = 0;
-
+  createBoard();
   placeBomb();
   document.getElementById("gameContainer").innerHTML = "";
   document.getElementById("score").innerHTML = ("000" + score).substr(-3);
